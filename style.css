@@ -1,0 +1,361 @@
+@font-face {
+    font-family: "Epilogue Black";
+    src: url("Epilogue/static/Epilogue-Black.ttf");
+}
+@font-face {
+    font-family: "Epilogue Basic";
+    src: url("Epilogue/static/Epilogue-Medium.ttf");
+}
+* {
+    font-family: "Epilogue Basic";
+    color: hsl(0, 0%, 41%);
+    font-size: 16px;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    left: calc(50% - 720px);
+    width: 1440px;
+    height: 100vh;
+    position: relative;
+}
+.main-container {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    left: calc(50% - 576px);
+    top: 5%;
+}
+.header {
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+}
+#logo {
+    width: 15%;
+    padding-top: 10px;
+}
+#menu {
+    width: 65%;
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+#textMenu:hover{
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+    font-weight: bold;
+}
+#Features {
+    position: relative;
+    padding-top: 10px;
+}
+#dropdownFeatures {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    top: 30px;
+    left: -40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+#dropdownFeatures:hover {
+    display: block;
+}
+.item {
+    padding-bottom: 12px;
+}
+.item:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+.item > svg {
+    padding-right: 10px;
+}
+#Company {
+    position: relative;
+    padding-top: 10px;
+}
+#dropdownCompany {
+    width: 90px;
+    height: 70px;
+    position: absolute;
+    top: 30px;
+    left: -20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+#dropdownCompany:hover {
+    display: block;
+}
+.itemC {
+    padding-bottom: 12px;
+}
+.itemC:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+#Careers {
+    padding-top: 10px;
+}
+#About {
+    padding-top: 10px;
+}
+#login {
+    width: 10%; 
+}
+.login {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+.login:hover {
+    border: solid 2px;
+    color: hsl(0, 0%, 8%);
+    border-radius: 20px;
+    border-color: hsl(0, 0%, 8%);
+    font-weight: bold;
+    cursor: pointer;
+}
+.loginMobile {
+    display: none;
+}
+.registerMobile {
+    display: none;
+}
+#register {
+    width: 10%; 
+}
+.register {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+.register:hover {
+    border: solid 2px;
+    border-radius: 20px;
+    border-color: hsl(0, 0%, 8%);
+    font-weight: bold;
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+.content {
+    width: 100%;
+    height: 95%;
+    display: grid;
+    grid: 5% 10% 30% 20% 20% 10%  5% / 10% 50% 30% 5% 5%;
+}
+.title {
+    grid-column: 2;
+    grid-row: 3;
+    font-family: "Epilogue Black";
+    font-size: 70px;
+    padding-right: 100px;
+    display: flex;
+    align-items: flex-end;
+    color: hsl(0, 0%, 8%);
+}
+.sub {
+    grid-column: 2;
+    grid-row: 4;
+    padding-top: 30px;
+    padding-right: 150px;
+}
+.button {
+    grid-column: 2;
+    grid-row: 5;
+    
+}
+.learn {
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 20px;
+    color: hsl(0, 0%, 8%);
+    font-family: "Epilogue Black";
+}
+.learn:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 8%);
+    color: white;
+}
+.allLogo {
+    grid-column: 2;
+    grid-row: 6;
+}
+.allLogo > svg {
+    padding-right: 30px;
+}
+.image {
+    grid-area: 2 / 3 / span 5 / span 2;
+    background-image: url("images/image-hero-desktop.png");
+    background-size: cover;
+}
+#menuBar {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 375px;
+        height: 100vh;
+        left: 0;
+        position: relative;
+    }
+    #background {
+        width: 375px;
+        height: 100vh;
+        background-color: rgba(22, 7, 42, 0.45);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: none;
+    }
+    #menu {
+        width: calc(70% - 20px);
+        position: absolute;
+        
+        padding-top: 70px;
+    }
+    .main-container {
+        left: 0;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .header {
+        flex-direction: column;
+    }
+    #menu {
+        flex-direction: column;
+        gap: 10px;
+        background-color: white;
+        left: 30%;
+        height: fit-content;
+        padding-bottom: 10px;
+        width: calc(70% - 30px);
+        padding-left: 30px;
+        height: calc(100vh - 70px);
+        display: none;
+        
+        z-index: 3;
+    }
+    
+    #logo {
+        position: relative;
+        padding-left: 10px;
+
+    }
+    #dropdownFeatures {
+        position: static;
+        box-shadow: none;
+        padding-bottom: 0;
+        background-color: transparent;
+    }
+    #dropdownCompany {
+        position: static;
+        box-shadow: none;
+        padding-bottom: 0;
+        background-color: transparent;
+    }
+    #menuBar {
+        position: absolute;
+        top: 10px;
+        left: 90%;
+        display: block;
+        z-index: 3;
+    }
+    #iconMenu {
+        transform: scale(2, 2);
+    }
+    .content {
+        position: absolute;
+        width: 100%;
+        grid: 282px auto auto auto auto / 375px;
+        background-color: white;
+        top: 70px;
+    }
+    .loginPC {
+        display: none;
+    }
+    .registerPC {
+        display: none;
+    }
+    .loginMobile {
+        display: block;
+    }
+    .registerMobile {
+        display: block;
+    }
+    #login {
+        width: 80%;
+        height: 40px;
+        margin-top: 20px;
+    }
+    #register {
+        width: 80%;
+        height: 40px;
+    }
+
+    .image {
+        grid-column: 1;
+        grid-row: 1;
+        background-image: url("images/image-hero-mobile.png");
+        background-size: cover;
+    }
+    .title {
+        grid-column: 1;
+        grid-row: 2;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-family: "Epilogue Basic";
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .sub {
+        grid-column: 1;
+        grid-row: 3;
+        padding: 0;
+        height: fit-content;
+        width: calc(100% - 20px);
+        text-align: center;
+        padding-left: 10px;
+        line-height: 1.8;
+    }
+    .button {
+        grid-column: 1;
+        grid-row: 4;
+        display: flex;
+        justify-content: center;
+    }
+    .allLogo {
+        grid-column: 1;
+        grid-row: 5;
+        padding-left: 10px;
+        width: calc(100% - 20px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    
+    .allLogo > svg {
+        padding-right: 0px;
+        transform: scale(0.8 , 0.9);
+    }
+
+    
+}
